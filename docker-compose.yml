@@ -1,0 +1,21 @@
+version: '3'
+services:
+   app:
+      build: flask
+      volumes:
+        - app:/app
+
+      ports:
+        - "8080:8080"
+      container_name: app
+      networks:
+        - app_default
+      restart: always
+      environment:
+        - APP_VERSION=3
+        - APP_NAME=flask
+        - APP_ENV=production
+        - APP_DEBUG=False
+        - APP_SECRET=supersecret
+        - APP_HOST=localhost
+
