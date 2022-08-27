@@ -1,2 +1,2 @@
 # Flask_server
-# Added NginX
+# Added NginX & deployment fix
